@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
+    <title>Enhanced Weather Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="dashboard">
         <header>
             <h1>Weather Dashboard</h1>
+            <p class="subtitle">Beautiful weather insights at your fingertips</p>
             <div class="search-container">
-                <input type="text" id="city-search" placeholder="Search for a city...">
-                <button id="search-btn">Search</button>
-                <button id="location-btn">Use My Location</button>
+                <div class="search-wrapper">
+                    <input type="text" id="city-search" class="search-input" placeholder="Search for any city worldwide...">
+                </div>
+                <button id="search-btn" class="btn btn-primary">Search</button>
+                <button id="location-btn" class="btn btn-secondary">📍 My Location</button>
             </div>
         </header>
         
-        <div class="loading" id="loading">Loading...</div>
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
         
         <div class="current-weather" id="current-weather">
             <!-- Filled dynamically -->
@@ -31,7 +37,7 @@
             <!-- Filled dynamically -->
         </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
